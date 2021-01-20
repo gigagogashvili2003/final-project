@@ -1,0 +1,307 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+
+/* header */
+
+.background {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    background-size: cover;  
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px 0px 30% 30%;
+    z-index: 1;
+    
+
+}
+
+.office {
+    position: absolute;
+    top: 90px;
+    right: 100px;
+    z-index: 3;
+}
+
+.star {
+    width: 100px;
+    height: 100px;
+    background-color: #1A4789;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.bubbles img {
+    width: 50px;
+    animation: bubble 5s linear infinite;
+    opacity: 0;
+}
+
+.bubbles {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0px;
+}
+
+@keyframes bubble {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    5% {
+        opacity: 0;
+        z-index: 2;
+    }
+    50% {
+        opacity: 1;
+        z-index: 2;
+    }
+    70% {
+        opacity: 1;
+        z-index: 2;
+    }
+    100% {
+        transform: translateY(-90vh);
+        opacity: 0;
+        z-index: 2;
+    }
+}
+
+.bubbles img:nth-child(1) {
+    animation-delay: 2s;
+    width: 25px;
+}
+.bubbles img:nth-child(2) {
+    animation-delay: 1s;
+}
+.bubbles img:nth-child(3) {
+    animation-delay: 3s;
+    width: 25px;
+}
+.bubbles img:nth-child(4) {
+    animation-delay: 4.5s;
+}
+.bubbles img:nth-child(5) {
+    animation-delay: 3s;
+}
+.bubbles img:nth-child(6) {
+    animation-delay: 6s;
+    width: 20px;
+}
+.bubbles img:nth-child(7) {
+    animation-delay: 7s;
+    width: 35px;
+
+}
+.bubbles img:nth-child(8) {
+    animation-delay: 8s;
+
+}
+.bubbles img:nth-child(9) {
+    animation-delay: 9.5s;
+    width: 35px;
+
+}
+.bubbles img:nth-child(10) {
+    animation-delay: 11s;
+
+}
+
+.navigation {
+    font-size: 20px;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    text-transform: capitalize;
+    width: 100%;
+    height: 50px;
+    background-color: #0066CC;
+    border-radius: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+.nav-ul {
+    display: flex;
+    
+}
+.nav-li {
+    margin-left: 40px;
+}
+
+.nav-a {
+    color: white;
+}
+
+.nav-li::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 6px;
+    background: #00C9FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    border-radius: 10px;
+    transition: width 0.4s linear;
+    
+}
+
+.nav-li:hover::after{
+    border:  0px solid blue;
+    width: 100%;
+    transition:  width 0.4s linear;
+}
+
+.header-first-title {
+    position: absolute;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    top: 200px;
+    left: 100px;
+    font-size: 50px;
+    z-index: 2;
+    width: 600px;
+    line-height: 55px;
+    margin: 0;
+    padding: 0;
+}
+
+.header-paragraph {
+    position: absolute;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    top: 320px;
+    left: 100px;
+    z-index: 2;
+    width: 686px;
+    line-height: 24px;
+
+}
+
+.fa-gofore {
+    position: absolute;
+    top: 2.5px;
+    left: 15px;
+    z-index: 5;
+    font-size: 45px;
+    color: #FF9C00;
+}
+
+.gigs-zone {
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    position: absolute;
+    top: 12.5px;
+    left: 57px;
+    z-index: 5;
+    text-transform: capitalize;
+}
+.gigs-zone a{
+    color: white;
+}
+
+.sign-up,
+.sign-in {
+    position: absolute;
+    top: 5px;
+    right: 135px;
+    z-index: 5;
+    color: white;
+    padding: 5px 20px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-size: 17px;
+    outline: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    position: fixed;
+}
+
+.sign-in {
+    right: 20px;
+}
+
+.sign-up::after,
+.sign-in::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 6px;
+    background: #00C9FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    border-radius: 10px;
+    transition: width 0.4s linear;
+    
+}
+
+.sign-up:hover::after,
+.sign-in:hover::after {
+    border:  0px solid blue;
+    width: 100%;
+    transition:  width 0.4s linear;
+}
+
+.gigs-zone::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 6px;
+    background: #00C9FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    border-radius: 10px;
+    transition: width 0.4s linear;
+    
+}
+
+.gigs-zone:hover::after{
+    border:  0px solid blue;
+    width: 100%;
+    transition:  width 0.4s linear;
+}
+
+.header-read-more {
+    width: 136px;
+    height: 48px;
+    font-size: 17px;
+    background-color: #FF9C00;
+    border-radius: 15px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    left: 100px;
+    bottom: 300px;
+    z-index: 5;
+}
+
+/* first section starts here */
+
+
+
+
+
+
+
+
+
+
+
